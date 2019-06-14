@@ -78,4 +78,10 @@ cambiar de grupo:
 sudo chgrp + grupo + carpeta o archivo al que se quiera mover a ese grupo.
 
 
+deshabilitar contraseña:
+
+passwd -l: deshabilita;
+passwd -u: habilita
+
+
 
