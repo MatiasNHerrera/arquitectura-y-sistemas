@@ -1,0 +1,81 @@
+PROCESOS: 
+
+-Existen procesos que podemos controlar y otros que no, los cuales correran solos y ya saben que hacer (Se llaman demonios).
+ 1- Lo primero que se carga la BIOS: la cual es la entrada y salida estandar que debe poseer cualquier computadora para que los sistemas operativos puedan ser utilizados.
+ 2- Lo segundo que se carga es el Boot Loader: nos permite analizar los discos rigidos para ver cual es aquel que posee un sistema operativo. Magic number: 64 bytes. Indica donde voy a cargar que sistema operativo.
+ 3- Kernel: Administra lo que accede al hardware, como el hardware entra a mi programa, administra que programa se va a cargar. Kernel es el encargado de controlar la iteracion entre hardware y software, tambien entre software y software.
+
+ 4- Comienza el primer proceso, INIT: crea procesos, los cuales pueden tener una funcionalidad por un determinado tiempo de vida, o aquellos los cuales se encuentran en un buqle constantes esperando que el usuario realice algun proceso.
+    El init va desplegando procesos distintos los cuales serian los procesos "hijos".
+
+Manejar procesos Comandos:
+
+-top: 
+-Bg: llevar o traer del background los procesos
+-Fg: 
+-Jobs: Toma los procesos que estan corriendo.
+-Kill PID: sirve para matar procesos.
+-ps -ef_ muestra procesos en la consola.
+
+Estados de los proceos:
+
+-R: running;
+-S: sleep;
+-Z: zombie;
+-Swap : no puedo verlo.
+-Stoped: puedo verlo pero no puedo volver a ejecutarlo
+
+con el & puedo ejecutar procesos en segundo plano.
+
+proceso para matar un zombie: buscar zombie, identificarlo y matarlo usando kill + id;
+
+
+USUARIO:
+
+Permisos:
+
+r: lectura
+w: escritura
+x: ejecucion
+
+rwx rwx rwx (se repite 3 veces). //CADENA BINARIA
+
+1- propietario.
+2- grupo.
+3- los demas.
+
+
+111 110 100 (ejemplo de la cadena binaria que representa rwx rwx rwx)
+
+crear usuario con home
+
+useradd -md o -m -d + /home/usuario usuario
+/etc/passwd para ver si se encuentra el usuario
+
+crear contraseña usuario:
+
+sudo passwd pepito
+
+logearse: 
+
+sudo login
+
+
+eliminar usuario: 
+
+sudo userdel pepito 
+
+modificar usuario:
+
+sudo usermod 
+
+crear grupo:
+
+sudo groupadd nombre
+
+cambiar de grupo:
+
+sudo chgrp + grupo + carpeta o archivo al que se quiera mover a ese grupo.
+
+
+
