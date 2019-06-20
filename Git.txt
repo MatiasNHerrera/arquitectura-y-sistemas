@@ -1,0 +1,3 @@
+-Git remote add upstream + link repositorio forkead
+-Git fetch: hace update de los archivos del fork + upstream (nombre cualquier que le ponga)
+-Git merge: Fusiona las ramas forkeadas con la original. (cuando hago merge se pushea solo). 
